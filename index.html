@@ -61,13 +61,15 @@
   <h2>Hubungi Saya</h2>
   <p>Terbuka untuk kolaborasi dan proyek freelance 🚀</p>
   
-  <form action="https://formspree.io/f/xovpwjbn" method="POST" class="contact-form">
+  <form id="contact-form" class="contact-form">
     <input type="text" name="name" placeholder="Nama Kamu" required />
     <input type="email" name="_replyto" placeholder="Email Kamu" required />
     <textarea name="message" placeholder="Pesan Kamu" rows="5" required></textarea>
     <button type="submit" class="btn">Kirim Pesan</button>
+    <p id="form-status" style="margin-top:10px;"></p>
   </form>
 </section>
+
 
   <!-- FOOTER -->
   <footer>
@@ -94,8 +96,38 @@
       document.body.classList.toggle("dark-mode");
       toggleButton.textContent = document.body.classList.contains("dark-mode") ? "🌞" : "🌙";
     });
+    // ==== FORM KONTAK AJAX ====
+  const form = document.getElementById("contact-form");
+  const formStatus = document.getElementById("form-status");
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    
+    const data = new FormData(form);
+    const action = "https://formspree.io/f/xovpwjbn"; // Ganti dengan Form ID kamu
+    
+    try {
+      const response = await fetch(action, {
+        method: "POST",
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        formStatus.style.color = "green";
+        formStatus.textContent = "✅ Pesan terkirim! Terima kasih.";
+        form.reset();
+      } else {
+        formStatus.style.color = "red";
+        formStatus.textContent = "⚠️ Terjadi kesalahan, coba lagi.";
+      }
+    } catch (error) {
+      formStatus.style.color = "red";
+      formStatus.textContent = "⚠️ Terjadi kesalahan, coba lagi.";
+    }
+  });
   </script>
 </body>
 </html>
+
 
 
