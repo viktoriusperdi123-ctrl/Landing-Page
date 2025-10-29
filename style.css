@@ -157,3 +157,59 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* === DARK MODE TOGGLE === */
+.toggle-btn {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.toggle-btn:hover {
+  transform: scale(1.2);
+}
+
+/* === DARK MODE THEME === */
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.dark-mode header {
+  background-color: #1e1e1e;
+  box-shadow: 0 2px 10px rgba(255,255,255,0.05);
+}
+
+body.dark-mode nav ul li a {
+  color: #ddd;
+}
+
+body.dark-mode nav ul li a:hover {
+  color: #ffd700;
+}
+
+body.dark-mode .hero {
+  background: linear-gradient(135deg, #222, #444);
+}
+
+body.dark-mode .btn {
+  background: #333;
+  color: #fff;
+}
+
+body.dark-mode .btn:hover {
+  background: #555;
+}
+
+body.dark-mode .card {
+  background: #1e1e1e;
+  color: #f0f0f0;
+  box-shadow: 0 2px 8px rgba(255,255,255,0.1);
+}
+
+body.dark-mode footer {
+  background: #1a1a1a;
+  color: #aaa;
+}
