@@ -1,0 +1,18 @@
+body {
+  font-family: Poppins, sans-serif;
+  background: linear-gradient(135deg, #007bff, #6610f2);
+  color: white;
+  text-align: center;
+  padding: 100px;
+}
+
+a {
+  background: white;
+  color: #007bff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+a:hover {
+  background: #f0f0f0;
+}
