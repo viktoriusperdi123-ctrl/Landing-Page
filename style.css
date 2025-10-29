@@ -239,3 +239,13 @@ body.dark-mode .contact-form input:focus,
 body.dark-mode .contact-form textarea:focus {
   border-color: #ffd700;
 }
+
+#form-status {
+  font-weight: 500;
+  text-align: left;
+}
+
+/* Dark mode untuk form status */
+body.dark-mode #form-status {
+  color: #f1f1f1; /* warna default text */
+}
