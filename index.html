@@ -17,6 +17,7 @@
         <li><a href="#projects">Proyek</a></li>
         <li><a href="#contact">Kontak</a></li>
       </ul>
+      <button id="toggle-dark-mode" class="toggle-btn">🌙</button>
     </nav>
   </header>
 
@@ -73,7 +74,29 @@
     const hiddenElements = document.querySelectorAll('.hidden');
     hiddenElements.forEach(el => observer.observe(el));
   </script>
+  <script>
+    // Efek muncul saat scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    });
+
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach(el => observer.observe(el));
+
+    // === DARK MODE TOGGLE ===
+    const toggleButton = document.getElementById("toggle-dark-mode");
+    toggleButton.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      // ubah ikon 🌞/🌙
+      toggleButton.textContent = document.body.classList.contains("dark-mode") ? "🌞" : "🌙";
+    });
+  </script>
 </body>
 </html>
+
 
 
