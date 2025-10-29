@@ -90,12 +90,24 @@
     const hiddenElements = document.querySelectorAll('.hidden');
     hiddenElements.forEach(el => observer.observe(el));
 
-    // Dark mode toggle
-    const toggleButton = document.getElementById("toggle-dark-mode");
-    toggleButton.addEventListener("click", () => {
-      document.body.classList.toggle("dark-mode");
-      toggleButton.textContent = document.body.classList.contains("dark-mode") ? "🌞" : "🌙";
-    });
+   // ==== DARK MODE TOGGLE DENGAN AUTO-SAVE ====
+  const toggleButton = document.getElementById("toggle-dark-mode");
+
+  // Load preferensi dari localStorage saat halaman dibuka
+  if(localStorage.getItem("dark-mode") === "true") {
+    document.body.classList.add("dark-mode");
+    toggleButton.textContent = "🌞";
+  } else {
+    toggleButton.textContent = "🌙";
+  }
+
+  toggleButton.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    const isDark = document.body.classList.contains("dark-mode");
+    toggleButton.textContent = isDark ? "🌞" : "🌙";
+    // Simpan preferensi ke localStorage
+    localStorage.setItem("dark-mode", isDark);
+  });
     // ==== FORM KONTAK AJAX ====
   const form = document.getElementById("contact-form");
   const formStatus = document.getElementById("form-status");
@@ -128,6 +140,7 @@
   </script>
 </body>
 </html>
+
 
 
 
