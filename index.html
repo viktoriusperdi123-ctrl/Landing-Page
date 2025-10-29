@@ -58,10 +58,16 @@
 
   <!-- KONTAK -->
   <section id="contact" class="contact hidden">
-    <h2>Hubungi Saya</h2>
-    <p>Terbuka untuk kolaborasi dan proyek freelance 🚀</p>
-    <a href="mailto:viktorius@example.com" class="btn">Kirim Email</a>
-  </section>
+  <h2>Hubungi Saya</h2>
+  <p>Terbuka untuk kolaborasi dan proyek freelance 🚀</p>
+  
+  <form action="https://formspree.io/f/yourformid" method="POST" class="contact-form">
+    <input type="text" name="name" placeholder="Nama Kamu" required />
+    <input type="email" name="_replyto" placeholder="Email Kamu" required />
+    <textarea name="message" placeholder="Pesan Kamu" rows="5" required></textarea>
+    <button type="submit" class="btn">Kirim Pesan</button>
+  </form>
+</section>
 
   <!-- FOOTER -->
   <footer>
@@ -91,3 +97,4 @@
   </script>
 </body>
 </html>
+
