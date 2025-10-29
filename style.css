@@ -145,3 +145,15 @@ footer {
   color: #666;
   font-size: 0.9rem;
 }
+
+/* === ANIMASI FADE-IN SAAT SCROLL === */
+.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
