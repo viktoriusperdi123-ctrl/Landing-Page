@@ -3,12 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Landing Page | Viktorius Perdi</title>
+  <title>Viktorius Perdi | Web Developer</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Selamat Datang di Website Saya</h1>
-  <p>Saya seorang Web Developer yang berfokus pada desain dan teknologi modern.</p>
-  <a href="#contact">Hubungi Saya</a>
+  <header>
+    <nav>
+      <h1 class="logo">Viktorius<span>Perdi</span></h1>
+      <ul>
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#projects">Proyek</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h2>Halo 👋, Saya <span>Viktorius Perdi</span></h2>
+      <p>Web Developer | IoT Enthusiast | Maker</p>
+      <a href="#projects" class="btn">Lihat Proyek</a>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>Tentang Saya</h2>
+    <p>Saya seorang mahasiswa Teknik Elektro dengan fokus pada Telekomunikasi dan pengembangan sistem IoT. Saat ini saya juga aktif mengembangkan web portfolio dan aplikasi berbasis teknologi modern.</p>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Proyek Terbaru</h2>
+    <div class="project-list">
+      <div class="card">
+        <h3>IoT Monitoring System</h3>
+        <p>Sistem pemantauan suhu & kelembaban berbasis LoRa dan ESP8266 dengan integrasi Blynk.</p>
+      </div>
+      <div class="card">
+        <h3>Personal Portfolio Website</h3>
+        <p>Website pribadi untuk menampilkan profil, keahlian, dan proyek saya.</p>
+      </div>
+      <div class="card">
+        <h3>Smart Relay Node</h3>
+        <p>Implementasi jaringan komunikasi LoRa Tree dengan routing otomatis.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Hubungi Saya</h2>
+    <p>Terbuka untuk kolaborasi dan proyek freelance 🚀</p>
+    <a href="mailto:viktorius@example.com" class="btn">Kirim Email</a>
+  </section>
+
+  <footer>
+    <p>© 2025 Viktorius Perdi. Dibuat dengan ❤️ menggunakan HTML & CSS.</p>
+  </footer>
 </body>
 </html>
