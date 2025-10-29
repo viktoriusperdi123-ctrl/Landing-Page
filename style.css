@@ -227,3 +227,15 @@ body.dark-mode footer {
   background: #1a1a1a;
   color: #aaa;
 }
+
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+  background: #1e1e1e;
+  color: #f1f1f1;
+  border: 1px solid #444;
+}
+
+body.dark-mode .contact-form input:focus,
+body.dark-mode .contact-form textarea:focus {
+  border-color: #ffd700;
+}
